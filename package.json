@@ -9,11 +9,11 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@remotion/cli": "^4.0.434",
-    "@remotion/tailwind": "^4.0.434",
+    "@remotion/cli": "^4.0.506",
+    "@remotion/tailwind": "^4.0.506",
     "@tailwindcss/postcss": "^4.2.1",
     "@types/react": "^18.3.0",
-    "remotion": "^4.0.434",
+    "remotion": "^4.0.506",
     "tailwindcss": "^4.2.1",
     "typescript": "^5.5.0"
   },
