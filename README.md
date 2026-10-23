@@ -8,7 +8,6 @@
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
   <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
   <img src="https://img.shields.io/badge/Remotion-5B37BF?style=for-the-badge" alt="Remotion">
-  <img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="TailwindCSS">
 </p>
 
 A framework for creating polished product launch videos entirely in code — no After Effects, no timeline editors. Write React components, preview in the browser, render to MP4. Same approach the Anthropic Claude Code team uses for their feature announcements.
@@ -63,7 +62,7 @@ Write scenes as React → Preview in Remotion Studio (localhost:3000)
 ## Tech stack
 
 - **Framework:** Remotion 4 (React-based video engine)
-- **Styling:** TailwindCSS via `@remotion/tailwind`
+- **Styling:** React inline styles using the shared tokens in `src/theme.ts`
 - **Animations:** `spring()` + `interpolate()` from Remotion (no CSS keyframes)
 - **Rendering:** Chrome Headless Shell → MP4
 - **Agent skills:** Remotion official skills from `remotion-dev/skills` (animations, timing, transitions)
