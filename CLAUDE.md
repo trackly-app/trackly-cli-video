@@ -7,8 +7,7 @@ Animated product launch videos built as React components, rendered to MP4 via Re
 - **Remotion 4** -- React-based video engine (compositions, spring animations, interpolate)
 - **React 18** -- each scene is a functional component
 - **TypeScript 5**
-- **TailwindCSS 4** -- enabled via `@remotion/tailwind` webpack override in `remotion.config.ts`
-- **Inline styles dominate** -- Tailwind is available but most styling uses `style={}` objects referencing `theme.ts`
+- **Inline styles** -- components use `style={}` objects referencing `theme.ts`
 
 ## Directory Structure
 
@@ -36,7 +35,7 @@ public/                  # Static assets (staticFile() references)
   trackly-app-store.png
   favicon-512x512.png
   og-image.png
-remotion.config.ts       # Webpack override enabling Tailwind
+remotion.config.ts       # Default Remotion bundler (no styling override)
 ```
 
 ## Key Commands
@@ -96,5 +95,5 @@ npx remotion render src/index.ts TracklyLaunch out/trackly-launch.mp4
 - **Emojis render as black glyphs** on dark backgrounds and become invisible. Use inline SVGs with explicit `fill` colors from theme instead.
 - **Frame sum mismatch**: If scene durations in `TracklyLaunch.tsx` don't match `durationInFrames` in `Root.tsx`, video will have blank frames at the end or scenes get cut off.
 - **Static assets**: Use `staticFile("filename.png")` to reference files in `public/`. Direct imports do not work.
-- **Tailwind available but rarely used**: Most components use inline `style={}` objects. Both approaches work, but match the existing pattern when editing.
+- **Styling**: Use inline `style={}` objects and the shared tokens in `theme.ts`, matching the existing components.
 - **No CSS keyframes**: All animation goes through Remotion's `spring()` and `interpolate()`. CSS animations will not sync with Remotion's frame-by-frame rendering.

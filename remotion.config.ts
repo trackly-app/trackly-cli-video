@@ -1,6 +1,2 @@
-import { Config } from "@remotion/cli/config";
-import { enableTailwind } from "@remotion/tailwind";
-
-Config.overrideWebpackConfig((currentConfiguration) => {
-  return enableTailwind(currentConfiguration);
-});
+// Compositions use inline styles; the default Remotion bundler needs no override.
+export {};
